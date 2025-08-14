@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* a principal pagina esta no mac sala de vidro ja eta com as cores certa e tudo certinho  */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e9e9f6;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      
+    }
+    .login-container {
+      width: 86.4%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header {
+      background-color: #4a57a8;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5%;
+      color: rgb(240, 238, 238);
+      padding: 8%;
+      box-shadow: 2px  5px  10px rgba(0, 0, 0, 0.253);
+    }
+    .header i {
+      cursor: pointer;
+      font-size: 1.3rem;
+    }
+    .header h1 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      margin-top: 5%;
+    }
+    label {
+      font-size: 0.9rem;
+      color: #4a57a8;
+      margin-top: 5%;
+    }
+    input {
+      padding: 4%;
+      border: none;
+      background-color: #dfe2f2;
+      border-radius: 10px;
+      margin-top: 0%;
+      outline: none;
+      font-size: 0.95rem;
+    }
+    .password-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .password-container input {
+      flex: 1;
+    }
+    .password-container i {
+      position: absolute;
+      right: 5%;
+      color: #4a57a8;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    .forgot-link {
+      text-align: right;
+      font-size: 0.88rem;
+      margin: 8% 0;
+      color: #4a57a8;
+      text-decoration: none;
+      transition-duration: 0.3s;
+    }
+    .forgot-link:hover{
+       transition-duration: 0.3s;
+       font-size: 90%;
+    }
+    .btn-primary {
+      background-color: #4a57a8;
+      text-align: center;
+      color: white;
+      padding: 6%;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 5px;
+      box-shadow: 2px 6px 10px rgba(0,0,0,0.2);
+      transition-duration: 0.3s;
+      text-decoration: none;
+    }
+    .btn-primary:hover{
+      transition-duration: 0.3s;
+      font-size: 110%;
+    }
+    .extra-link {
+      display: block;
+      text-align: center;
+      margin: 7% 0;
+      font-size: 0.9rem;
+      color: #4a57a8;
+      text-decoration: none;
+    }
+    .extra-link2 {
+      display: block;
+      text-align: center;
+      margin: 2% 0;
+      font-size: 0.9rem;
+      color: #4a57a8;
+      text-decoration: none;
+    }
+    .social-login {
+      display: flex;
+      align-items: center;
+      gap: 0%;
+      margin-top: 1%;
+      color: #4a57a8;
+      font-size: 0.85rem;
+    }
+    .divider {
+      flex: 1;
+      height: 1px;
+      background-color: #b0b2d4;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15%;
+      margin-top: 1%;
+    }
+    .social-icons button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.6rem;
+    }
+    .social-icons .fa-google { color: #db4437; }
+    .social-icons .fa-facebook-f { color: #1877f2; }
+    .social-icons .fa-apple { color: black; }
+    .support-link {
+      margin-top: 5px;
+      font-size: 0.9rem;
+      color: #4a57a8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="header">
+      <i class="fas fa-arrow-left"></i>
+      <h1>Entrar</h1>
+    </div>
+
+    <form>
+      <label for="email">Seu e-mail ou CPF</label>
+      <input type="text" id="email" placeholder="Digite seu e-mail ou CPF" required />
+
+      <label for="senha">Sua senha</label>
+      <div class="password-container">
+        <input type="password" id="senha" placeholder="Digite sua senha" required />
+        <i class="fas fa-eye-slash toggle-password" onclick="togglePassword()"></i>
+      </div>
+
+      <a href="pag2.html" class="forgot-link">Esqueci/Trocar senha ou e-mail</a>
+
+      <a href="pag3.html" class="btn-primary">ENTRAR</a>
+
+    </form>
+
+    <a href="#" class="extra-link">Ver cartão virtual com código de acesso</a>
+    <a href="#" class="extra-link2">Criar conta</a>
+
+    <div class="social-login">
+      <span class="divider"></span>
+      <p>ou faça login com</p>
+      <span class="divider"></span>
+    </div>
+
+    <div class="social-icons">
+      <button type="button"><i class="fab fa-google"></i></button>
+      <button type="button"><i class="fab fa-facebook-f"></i></button>
+      <button type="button"><i class="fab fa-apple"></i></button>
+    </div>
+
+    <a href="#" class="support-link">Suporte do aplicativo</a>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const senha = document.getElementById("senha");
+      const icon = document.querySelector(".toggle-password");
+      if (senha.type === "password") {
+        senha.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      } else {
+        senha.type = "password";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      }
+    }
+  </script>
+</body>
+</html>
