@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    flex: 1; /* ocupa todo o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    background-color: #fffefe;
+  }
+  
+  /* Cabeçalho */
+  .header {
+    width: 100%;
+    background-color: #4a57a8;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition-duration: 0.3s;
+  }
+  
+  .imagem img {
+    transition-duration: 0.3s;
+  }
+  
+  .imagem:hover img {
+    width: 45%;
+    font-size: 100%;
+    transition-duration: 0.3s;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .text1 {
+    margin: 0;
+    font-size: 3.0rem;
+    font-weight: 400;
+    position: relative;
+    top: -30%;
+    left: 20%;
+  }
+  
+  .header h1 span {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  
+  /* Campo de busca */
+  .search {
+    background-color: white;
+    padding: 6px 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+    margin: -20px 15px 0;
+    width: 80%;
+  }
+  
+  .search i {
+    color: #4a57a8;
+    margin-right: 10px;
+  }
+  
+  .search input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 0.9rem;
+    background: none;
+  }
+  
+  /* Seção "Acompanhe sua saúde" */
+  .section-title {
+    margin: 20px 0 10px;
+    color: #4a57a8;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 85%;
+  }
+  
+  .card {
+    background-color: #4a57a8;
+    color: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+  }
+  
+  .card i {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Botão campanhas */
+  .btn-campanhas {
+    background-color: #4a57a8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 20px 0;
+    width: 85%;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+  }
+  
+  /* Card da campanha */
+  .campanha {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: 5px 8px 10px rgba(0,0,0,0.4);
+    width: 70%;
+    overflow: hidden;
+  }
+  
+  .campanha img {
+    width: 100%;
+    display: flex;
+  }
+  
+  .dots {
+    text-align: center;
+    margin: 2% 0;
+    font-size: 1.5rem;
+    color: #ccc;
+  }
+  
+  /* Rodapé fixado no final */
+  .footer {
+    background-color: #4a57a8;
+    width: 100%;
+    padding: 15%;
+    color: white;
+    text-align: center;
+    margin-top: auto; /* empurra o footer pro final da tela */
+  }
+  
